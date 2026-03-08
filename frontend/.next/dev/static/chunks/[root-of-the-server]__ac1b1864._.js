@@ -1844,8 +1844,8 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 "use strict";
 
 __turbopack_context__.s([
-    "__N_SSP",
-    ()=>__N_SSP,
+    "__N_SSG",
+    ()=>__N_SSG,
     "default",
     ()=>Home
 ]);
@@ -1865,7 +1865,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$js__
 ;
 ;
 ;
-var __N_SSP = true;
+var __N_SSG = true;
 function Home({ profile, services }) {
     const title = profile?.name && profile.name !== '...' ? profile.name : 'Estudio Juridico';
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {

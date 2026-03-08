@@ -1,0 +1,13 @@
+[project]
+name = "lawyer-landing"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "django>=5.0.4",
+    "djangorestframework>=3.15.1",
+    "djangorestframework-simplejwt>=5.3.1",
+    "django-cors-headers>=4.3.1",
+]
+
+[tool.uv]
+dev-dependencies = []

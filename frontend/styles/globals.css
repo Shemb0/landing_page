@@ -7,13 +7,13 @@ html {
 }
 
 body {
-  background-color: #000000;
-  color: #cccccc;
+  background-color: #111110;
+  color: #C8C0B4;
 }
 
 ::selection {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #C5A35A;
+  color: #0A0908;
 }
 
 ::-webkit-scrollbar {
@@ -21,14 +21,61 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0d0d0d;
+  background: #111110;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #2E2C29;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #5C5956;
 }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes expandLine {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.06; }
+  50%       { opacity: 0.12; }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease both;
+}
+
+.animate-expand {
+  transform-origin: left;
+  animation: expandLine 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }

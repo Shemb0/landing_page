@@ -1,13 +1,18 @@
+import os
 from pathlib import Path
 from datetime import timedelta
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-cambia-esto-en-produccion-clave-secreta-larga-y-aleatoria-123'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-dev-key-solo-para-desarrollo-local')
 
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = [
+    h.strip()
+    for h in os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1,0.0.0.0').split(',')
+    if h.strip()
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -25,6 +30,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -53,12 +59,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+# Base de datos: usa DATABASE_URL en produccion, SQLite en desarrollo
+_database_url = os.environ.get('DATABASE_URL')
+if _database_url:
+    import dj_database_url
+    DATABASES = {'default': dj_database_url.config(default=_database_url, conn_max_age=600)}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
 
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
@@ -72,7 +84,12 @@ TIME_ZONE = 'America/Argentina/Buenos_Aires'
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+if not DEBUG:
+    MIDDLEWARE.insert(2, 'whitenoise.middleware.WhiteNoiseMiddleware')
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -92,6 +109,10 @@ SIMPLE_JWT = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'http://127.0.0.1:3000',
+    o.strip()
+    for o in os.environ.get(
+        'CORS_ALLOWED_ORIGINS',
+        'http://localhost:3000,http://127.0.0.1:3000'
+    ).split(',')
+    if o.strip()
 ]

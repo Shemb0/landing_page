@@ -121,8 +121,22 @@ function Navbar({ name }) {
         return ()=>window.removeEventListener('scroll', onScroll);
     }, []);
     const displayName = name && name !== '...' ? name : 'Estudio Juridico';
+    const links = [
+        [
+            '#inicio',
+            'Inicio'
+        ],
+        [
+            '#servicios',
+            'Servicios'
+        ],
+        [
+            '#contacto',
+            'Contacto'
+        ]
+    ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("nav", {
-        className: `fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-black/95 backdrop-blur-sm border-b border-law-border' : 'bg-transparent'}`,
+        className: `fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-law-dark/95 backdrop-blur-md border-b border-law-border shadow-lg shadow-black/30' : 'bg-transparent'}`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                 className: "max-w-6xl mx-auto px-6 py-4 flex items-center justify-between",
@@ -132,47 +146,43 @@ function Navbar({ name }) {
                         children: displayName
                     }, void 0, false, {
                         fileName: "[project]/components/Navbar.js",
-                        lineNumber: 24,
+                        lineNumber: 30,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                         className: "hidden md:flex items-center gap-8",
                         children: [
-                            [
-                                [
-                                    '#inicio',
-                                    'Inicio'
-                                ],
-                                [
-                                    '#servicios',
-                                    'Servicios'
-                                ],
-                                [
-                                    '#contacto',
-                                    'Contacto'
-                                ]
-                            ].map(([href, label])=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                            links.map(([href, label])=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
                                     href: href,
-                                    className: "text-law-secondary hover:text-law-white transition-colors text-xs tracking-widest uppercase",
-                                    children: label
-                                }, href, false, {
+                                    className: "text-law-secondary hover:text-law-white transition-colors text-xs tracking-widest uppercase relative group",
+                                    children: [
+                                        label,
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                            className: "absolute -bottom-1 left-0 w-0 h-px bg-law-gold transition-all duration-300 group-hover:w-full"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Navbar.js",
+                                            lineNumber: 43,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, href, true, {
                                     fileName: "[project]/components/Navbar.js",
-                                    lineNumber: 32,
-                                    columnNumber: 15
+                                    lineNumber: 37,
+                                    columnNumber: 13
                                 }, this)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
                                 href: "#contacto",
-                                className: "border border-law-white/60 text-law-white px-5 py-2 text-xs tracking-widest uppercase hover:bg-law-white hover:text-black transition-all",
+                                className: "bg-law-gold text-law-black px-5 py-2 text-xs tracking-widest uppercase font-semibold hover:bg-law-gold-light transition-colors rounded-sm",
                                 children: "Consultar"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.js",
-                                lineNumber: 41,
+                                lineNumber: 46,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Navbar.js",
-                        lineNumber: 29,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -191,7 +201,7 @@ function Navbar({ name }) {
                                 d: "M6 18L18 6M6 6l12 12"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.js",
-                                lineNumber: 57,
+                                lineNumber: 62,
                                 columnNumber: 15
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
                                 strokeLinecap: "round",
@@ -200,59 +210,58 @@ function Navbar({ name }) {
                                 d: "M4 6h16M4 12h16M4 18h16"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.js",
-                                lineNumber: 59,
+                                lineNumber: 64,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Navbar.js",
-                            lineNumber: 55,
+                            lineNumber: 60,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Navbar.js",
-                        lineNumber: 50,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Navbar.js",
-                lineNumber: 23,
+                lineNumber: 29,
                 columnNumber: 7
             }, this),
             menuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "md:hidden bg-black border-t border-law-border px-6 py-5 flex flex-col gap-5",
+                className: "md:hidden bg-law-dark border-t border-law-border px-6 py-5 flex flex-col gap-5",
                 children: [
-                    [
-                        '#inicio',
-                        'Inicio'
-                    ],
-                    [
-                        '#servicios',
-                        'Servicios'
-                    ],
-                    [
-                        '#contacto',
-                        'Contacto'
-                    ]
-                ].map(([href, label])=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                        href: href,
+                    links.map(([href, label])=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                            href: href,
+                            onClick: ()=>setMenuOpen(false),
+                            className: "text-law-secondary hover:text-law-white text-xs tracking-widest uppercase transition-colors",
+                            children: label
+                        }, href, false, {
+                            fileName: "[project]/components/Navbar.js",
+                            lineNumber: 74,
+                            columnNumber: 13
+                        }, this)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                        href: "#contacto",
                         onClick: ()=>setMenuOpen(false),
-                        className: "text-law-secondary hover:text-law-white text-xs tracking-widest uppercase transition-colors",
-                        children: label
-                    }, href, false, {
+                        className: "bg-law-gold text-law-black px-5 py-3 text-xs tracking-widest uppercase font-semibold hover:bg-law-gold-light transition-colors text-center rounded-sm mt-1",
+                        children: "Consultar"
+                    }, void 0, false, {
                         fileName: "[project]/components/Navbar.js",
-                        lineNumber: 70,
-                        columnNumber: 15
-                    }, this))
-            }, void 0, false, {
+                        lineNumber: 83,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/components/Navbar.js",
-                lineNumber: 67,
+                lineNumber: 72,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Navbar.js",
-        lineNumber: 16,
+        lineNumber: 22,
         columnNumber: 5
     }, this);
 }
@@ -272,10 +281,9 @@ function Hero({ profile }) {
         className: "relative min-h-screen flex items-center bg-law-dark overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 opacity-[0.04]",
+                className: "absolute inset-0 pointer-events-none",
                 style: {
-                    backgroundImage: 'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)',
-                    backgroundSize: '64px 64px'
+                    background: 'radial-gradient(ellipse 70% 60% at 20% 50%, rgba(197,163,90,0.07) 0%, transparent 70%), radial-gradient(ellipse 50% 40% at 80% 80%, rgba(197,163,90,0.04) 0%, transparent 60%)'
                 }
             }, void 0, false, {
                 fileName: "[project]/components/Hero.js",
@@ -283,17 +291,150 @@ function Hero({ profile }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black to-transparent"
+                className: "absolute inset-0 opacity-[0.035]",
+                style: {
+                    backgroundImage: 'radial-gradient(circle, #C8C0B4 1px, transparent 1px)',
+                    backgroundSize: '36px 36px'
+                }
             }, void 0, false, {
                 fileName: "[project]/components/Hero.js",
-                lineNumber: 18,
+                lineNumber: 17,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-law-border to-transparent"
+                className: "absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-t from-law-black to-transparent"
             }, void 0, false, {
                 fileName: "[project]/components/Hero.js",
-                lineNumber: 21,
+                lineNumber: 26,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                className: "absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-law-gold/20 to-transparent"
+            }, void 0, false, {
+                fileName: "[project]/components/Hero.js",
+                lineNumber: 29,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                className: "absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none hidden lg:block overflow-hidden",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
+                    viewBox: "0 0 500 600",
+                    fill: "none",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    className: "absolute right-0 top-1/2 -translate-y-1/2 w-[480px] opacity-[0.045]",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("circle", {
+                            cx: "250",
+                            cy: "300",
+                            r: "200",
+                            stroke: "#C5A35A",
+                            strokeWidth: "1"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Hero.js",
+                            lineNumber: 39,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("circle", {
+                            cx: "250",
+                            cy: "300",
+                            r: "150",
+                            stroke: "#C5A35A",
+                            strokeWidth: "0.5"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Hero.js",
+                            lineNumber: 40,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("line", {
+                            x1: "250",
+                            y1: "80",
+                            x2: "250",
+                            y2: "520",
+                            stroke: "#C5A35A",
+                            strokeWidth: "0.8"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Hero.js",
+                            lineNumber: 41,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("line", {
+                            x1: "30",
+                            y1: "300",
+                            x2: "470",
+                            y2: "300",
+                            stroke: "#C5A35A",
+                            strokeWidth: "0.8"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Hero.js",
+                            lineNumber: 42,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("line", {
+                            x1: "250",
+                            y1: "170",
+                            x2: "130",
+                            y2: "360",
+                            stroke: "#C5A35A",
+                            strokeWidth: "0.6"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Hero.js",
+                            lineNumber: 43,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("line", {
+                            x1: "250",
+                            y1: "170",
+                            x2: "370",
+                            y2: "360",
+                            stroke: "#C5A35A",
+                            strokeWidth: "0.6"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Hero.js",
+                            lineNumber: 44,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("circle", {
+                            cx: "130",
+                            cy: "360",
+                            r: "30",
+                            stroke: "#C5A35A",
+                            strokeWidth: "0.6"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Hero.js",
+                            lineNumber: 45,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("circle", {
+                            cx: "370",
+                            cy: "360",
+                            r: "30",
+                            stroke: "#C5A35A",
+                            strokeWidth: "0.6"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Hero.js",
+                            lineNumber: 46,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("circle", {
+                            cx: "250",
+                            cy: "170",
+                            r: "8",
+                            stroke: "#C5A35A",
+                            strokeWidth: "0.6"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Hero.js",
+                            lineNumber: 47,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/Hero.js",
+                    lineNumber: 33,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/components/Hero.js",
+                lineNumber: 32,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -302,113 +443,148 @@ function Hero({ profile }) {
                     className: "max-w-3xl",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                            className: "text-law-muted text-xs tracking-[0.4em] uppercase mb-8 font-sans",
+                            className: "animate-fade-up text-law-gold text-xs tracking-[0.45em] uppercase mb-8 font-sans font-medium",
                             children: "Estudio Juridico — Representacion Legal"
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 25,
+                            lineNumber: 53,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h1", {
-                            className: "font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-law-white leading-none mb-6",
+                            className: "animate-fade-up delay-100 font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-law-white leading-none mb-6",
                             children: profile?.name || '...'
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 29,
+                            lineNumber: 57,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: "flex items-center gap-4 mb-8",
+                            className: "animate-fade-up delay-200 flex items-center gap-4 mb-8",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                    className: "w-20 h-px bg-law-white"
+                                    className: "w-20 h-px bg-law-gold animate-expand delay-300"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.js",
-                                    lineNumber: 34,
+                                    lineNumber: 62,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                    className: "text-law-muted text-xs tracking-widest uppercase",
+                                    className: "text-law-muted text-xs tracking-widest uppercase font-sans",
                                     children: "Abogado"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.js",
-                                    lineNumber: 35,
+                                    lineNumber: 63,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 33,
+                            lineNumber: 61,
                             columnNumber: 11
                         }, this),
                         profile?.tagline && profile.tagline !== '...' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                            className: "text-law-text text-xl md:text-2xl font-light font-sans leading-relaxed mb-10 max-w-2xl",
+                            className: "animate-fade-up delay-300 text-law-text text-xl md:text-2xl font-light font-sans leading-relaxed mb-10 max-w-2xl",
                             children: profile.tagline
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 39,
+                            lineNumber: 67,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: "flex flex-col sm:flex-row gap-4",
+                            className: "animate-fade-up delay-400 flex flex-col sm:flex-row gap-4",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
                                     href: "#contacto",
-                                    className: "inline-block bg-law-white text-black px-8 py-4 text-xs font-semibold tracking-widest uppercase hover:bg-law-text transition-colors text-center",
-                                    children: "Contactar"
+                                    className: "inline-block bg-law-gold text-law-black px-8 py-4 text-xs font-semibold tracking-widest uppercase hover:bg-law-gold-light transition-colors text-center rounded-sm shadow-lg shadow-black/30",
+                                    children: "Contactar Ahora"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.js",
-                                    lineNumber: 45,
+                                    lineNumber: 73,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
                                     href: "#servicios",
-                                    className: "inline-block border border-law-border text-law-text px-8 py-4 text-xs font-semibold tracking-widest uppercase hover:border-law-white/50 hover:text-law-white transition-colors text-center",
+                                    className: "inline-block border border-law-border text-law-text px-8 py-4 text-xs font-semibold tracking-widest uppercase hover:border-law-gold/50 hover:text-law-white transition-colors text-center rounded-sm",
                                     children: "Ver Servicios"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.js",
-                                    lineNumber: 51,
+                                    lineNumber: 79,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 44,
+                            lineNumber: 72,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                            className: "animate-fade-up delay-500 flex items-center gap-6 mt-12 pt-8 border-t border-law-border/60",
+                            children: [
+                                'Consulta Confidencial',
+                                'Atencion Personalizada',
+                                'Experiencia Comprobada'
+                            ].map((badge)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                    className: "flex items-center gap-2",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                            className: "w-1 h-1 rounded-full bg-law-gold"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Hero.js",
+                                            lineNumber: 95,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                            className: "text-law-muted text-xs font-sans tracking-wide hidden sm:block",
+                                            children: badge
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Hero.js",
+                                            lineNumber: 96,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, badge, true, {
+                                    fileName: "[project]/components/Hero.js",
+                                    lineNumber: 94,
+                                    columnNumber: 15
+                                }, this))
+                        }, void 0, false, {
+                            fileName: "[project]/components/Hero.js",
+                            lineNumber: 88,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Hero.js",
-                    lineNumber: 24,
+                    lineNumber: 52,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Hero.js",
-                lineNumber: 23,
+                lineNumber: 51,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40",
+                className: "animate-fade-in delay-700 absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
                         className: "text-law-muted text-xs tracking-widest uppercase font-sans",
                         children: "Scroll"
                     }, void 0, false, {
                         fileName: "[project]/components/Hero.js",
-                        lineNumber: 63,
+                        lineNumber: 105,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                        className: "w-px h-10 bg-law-border"
+                        className: "w-px h-10 bg-gradient-to-b from-law-gold/60 to-transparent"
                     }, void 0, false, {
                         fileName: "[project]/components/Hero.js",
-                        lineNumber: 64,
+                        lineNumber: 106,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Hero.js",
-                lineNumber: 62,
+                lineNumber: 104,
                 columnNumber: 7
             }, this)
         ]
@@ -430,117 +606,298 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$run
 ;
 const values = [
     {
-        icon: '⚖️',
-        label: 'Compromiso Legal'
+        label: 'Compromiso Legal',
+        desc: 'Dedicacion total a cada caso',
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
+            viewBox: "0 0 24 24",
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "1.4",
+            className: "w-6 h-6",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
+                d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+            }, void 0, false, {
+                fileName: "[project]/components/About.js",
+                lineNumber: 7,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/components/About.js",
+            lineNumber: 6,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0))
     },
     {
-        icon: '🤝',
-        label: 'Atencion Personalizada'
+        label: 'Atencion Personalizada',
+        desc: 'Cercania en cada etapa',
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
+            viewBox: "0 0 24 24",
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "1.4",
+            className: "w-6 h-6",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
+                    d: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                }, void 0, false, {
+                    fileName: "[project]/components/About.js",
+                    lineNumber: 16,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("circle", {
+                    cx: "9",
+                    cy: "7",
+                    r: "4"
+                }, void 0, false, {
+                    fileName: "[project]/components/About.js",
+                    lineNumber: 17,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
+                    d: "M23 21v-2a4 4 0 0 0-3-3.87"
+                }, void 0, false, {
+                    fileName: "[project]/components/About.js",
+                    lineNumber: 18,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
+                    d: "M16 3.13a4 4 0 0 1 0 7.75"
+                }, void 0, false, {
+                    fileName: "[project]/components/About.js",
+                    lineNumber: 19,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/components/About.js",
+            lineNumber: 15,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0))
     },
     {
-        icon: '📋',
-        label: 'Asesoria Integral'
+        label: 'Asesoria Integral',
+        desc: 'Vision completa del conflicto',
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
+            viewBox: "0 0 24 24",
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "1.4",
+            className: "w-6 h-6",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
+                    d: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                }, void 0, false, {
+                    fileName: "[project]/components/About.js",
+                    lineNumber: 28,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("polyline", {
+                    points: "14,2 14,8 20,8"
+                }, void 0, false, {
+                    fileName: "[project]/components/About.js",
+                    lineNumber: 29,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("line", {
+                    x1: "16",
+                    y1: "13",
+                    x2: "8",
+                    y2: "13"
+                }, void 0, false, {
+                    fileName: "[project]/components/About.js",
+                    lineNumber: 30,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("line", {
+                    x1: "16",
+                    y1: "17",
+                    x2: "8",
+                    y2: "17"
+                }, void 0, false, {
+                    fileName: "[project]/components/About.js",
+                    lineNumber: 31,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("polyline", {
+                    points: "10,9 9,9 8,9"
+                }, void 0, false, {
+                    fileName: "[project]/components/About.js",
+                    lineNumber: 32,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/components/About.js",
+            lineNumber: 27,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0))
     },
     {
-        icon: '🛡️',
-        label: 'Defensa Efectiva'
+        label: 'Defensa Efectiva',
+        desc: 'Resultados que importan',
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
+            viewBox: "0 0 24 24",
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "1.4",
+            className: "w-6 h-6",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("circle", {
+                    cx: "12",
+                    cy: "12",
+                    r: "10"
+                }, void 0, false, {
+                    fileName: "[project]/components/About.js",
+                    lineNumber: 41,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("polyline", {
+                    points: "12,6 12,12 16,14"
+                }, void 0, false, {
+                    fileName: "[project]/components/About.js",
+                    lineNumber: 42,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/components/About.js",
+            lineNumber: 40,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0))
     }
 ];
 function About({ profile }) {
     if (!profile?.bio || profile.bio === '...') return null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
         id: "sobre-mi",
-        className: "py-24 bg-law-dark border-t border-law-border",
+        className: "py-28 bg-law-black border-t border-law-border",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
             className: "max-w-6xl mx-auto px-6",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                className: "grid grid-cols-1 lg:grid-cols-2 gap-16 items-center",
+                className: "grid grid-cols-1 lg:grid-cols-2 gap-16 items-start",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                className: "text-law-muted text-xs tracking-[0.4em] uppercase mb-5 font-sans",
+                                className: "text-law-gold text-xs tracking-[0.45em] uppercase mb-5 font-sans font-medium",
                                 children: "Sobre mi"
                             }, void 0, false, {
                                 fileName: "[project]/components/About.js",
-                                lineNumber: 17,
+                                lineNumber: 57,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
-                                className: "font-serif text-4xl md:text-5xl text-law-white mb-6 leading-tight",
+                                className: "font-serif text-4xl md:text-5xl text-law-white mb-5 leading-tight",
                                 children: profile.name && profile.name !== '...' ? profile.name : '...'
                             }, void 0, false, {
                                 fileName: "[project]/components/About.js",
-                                lineNumber: 20,
+                                lineNumber: 60,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                className: "w-16 h-px bg-law-border mb-8"
+                                className: "w-16 h-0.5 bg-law-gold mb-8"
                             }, void 0, false, {
                                 fileName: "[project]/components/About.js",
-                                lineNumber: 23,
+                                lineNumber: 63,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                className: "text-law-text text-base font-sans leading-relaxed",
+                                className: "text-law-text text-base font-sans leading-[1.9] mb-8",
                                 children: profile.bio
                             }, void 0, false, {
                                 fileName: "[project]/components/About.js",
-                                lineNumber: 24,
+                                lineNumber: 64,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                                href: "#contacto",
+                                className: "inline-flex items-center gap-2 text-law-gold text-xs font-semibold tracking-widest uppercase hover:gap-3 transition-all duration-200",
+                                children: [
+                                    "Solicitar Consulta",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
+                                        viewBox: "0 0 16 16",
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeWidth: "1.5",
+                                        className: "w-3.5 h-3.5",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
+                                            d: "M3 8h10M9 4l4 4-4 4"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/About.js",
+                                            lineNumber: 73,
+                                            columnNumber: 17
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/About.js",
+                                        lineNumber: 72,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/About.js",
+                                lineNumber: 67,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/About.js",
-                        lineNumber: 16,
+                        lineNumber: 56,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                         className: "grid grid-cols-2 gap-4",
-                        children: values.map(({ icon, label })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                className: "bg-law-surface border border-law-border p-6 text-center hover:border-law-white/20 transition-colors",
+                        children: values.map(({ icon, label, desc })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                className: "bg-law-surface border border-law-border p-6 group hover:border-law-gold/30 hover:bg-law-card transition-all duration-300 rounded-sm",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                        className: "text-3xl mb-3",
+                                        className: "text-law-gold mb-4 opacity-80 group-hover:opacity-100 transition-opacity",
                                         children: icon
                                     }, void 0, false, {
                                         fileName: "[project]/components/About.js",
-                                        lineNumber: 34,
+                                        lineNumber: 85,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                        className: "text-law-text text-xs font-sans tracking-wide",
+                                        className: "text-law-white text-sm font-sans font-medium mb-1",
                                         children: label
                                     }, void 0, false, {
                                         fileName: "[project]/components/About.js",
-                                        lineNumber: 35,
+                                        lineNumber: 88,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                        className: "text-law-muted text-xs font-sans leading-relaxed",
+                                        children: desc
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/About.js",
+                                        lineNumber: 89,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, label, true, {
                                 fileName: "[project]/components/About.js",
-                                lineNumber: 30,
+                                lineNumber: 81,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/components/About.js",
-                        lineNumber: 28,
+                        lineNumber: 79,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/About.js",
-                lineNumber: 14,
+                lineNumber: 54,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/About.js",
-            lineNumber: 13,
+            lineNumber: 53,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/About.js",
-        lineNumber: 12,
+        lineNumber: 52,
         columnNumber: 5
     }, this);
 }
@@ -557,7 +914,7 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$run
 function Services({ services }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
         id: "servicios",
-        className: "py-24 bg-black border-t border-law-border",
+        className: "py-28 bg-law-dark border-t border-law-border",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
             className: "max-w-6xl mx-auto px-6",
             children: [
@@ -565,7 +922,7 @@ function Services({ services }) {
                     className: "text-center mb-16",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                            className: "text-law-muted text-xs tracking-[0.4em] uppercase mb-5 font-sans",
+                            className: "text-law-gold text-xs tracking-[0.45em] uppercase mb-5 font-sans font-medium",
                             children: "Areas de Practica"
                         }, void 0, false, {
                             fileName: "[project]/components/Services.js",
@@ -573,7 +930,7 @@ function Services({ services }) {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
-                            className: "font-serif text-4xl md:text-5xl text-law-white",
+                            className: "font-serif text-4xl md:text-5xl text-law-white mb-6",
                             children: "Servicios de Representacion"
                         }, void 0, false, {
                             fileName: "[project]/components/Services.js",
@@ -581,7 +938,7 @@ function Services({ services }) {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: "w-16 h-px bg-law-border mx-auto mt-6"
+                            className: "w-16 h-0.5 bg-law-gold mx-auto"
                         }, void 0, false, {
                             fileName: "[project]/components/Services.js",
                             lineNumber: 13,
@@ -598,34 +955,41 @@ function Services({ services }) {
                     children: "Los servicios se mostraran aqui una vez que el abogado los complete."
                 }, void 0, false, {
                     fileName: "[project]/components/Services.js",
-                    lineNumber: 18,
+                    lineNumber: 17,
                     columnNumber: 11
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                     className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
                     children: services.map((service)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: "bg-law-surface border border-law-border p-8 group hover:border-law-white/25 transition-all duration-300",
+                            className: "bg-law-surface border border-law-border p-8 group hover:border-law-gold/30 hover:bg-law-card transition-all duration-300 rounded-sm relative overflow-hidden",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                    className: "text-4xl mb-5",
-                                    children: service.icon || '⚖️'
+                                    className: "absolute top-0 left-0 right-0 h-px bg-law-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Services.js",
                                     lineNumber: 28,
                                     columnNumber: 17
                                 }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                    className: "text-4xl mb-5 leading-none",
+                                    children: service.icon || '⚖️'
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Services.js",
+                                    lineNumber: 30,
+                                    columnNumber: 17
+                                }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
-                                    className: "font-serif text-xl text-law-white mb-3 group-hover:text-white transition-colors",
+                                    className: "font-serif text-xl text-law-white mb-3 group-hover:text-law-white transition-colors",
                                     children: service.title
                                 }, void 0, false, {
                                     fileName: "[project]/components/Services.js",
-                                    lineNumber: 29,
+                                    lineNumber: 31,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                    className: "w-8 h-px bg-law-border mb-4 group-hover:bg-law-secondary transition-colors"
+                                    className: "w-8 h-px bg-law-border mb-4 group-hover:bg-law-gold/50 transition-colors duration-300"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Services.js",
-                                    lineNumber: 32,
+                                    lineNumber: 34,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -633,19 +997,45 @@ function Services({ services }) {
                                     children: service.description
                                 }, void 0, false, {
                                     fileName: "[project]/components/Services.js",
-                                    lineNumber: 33,
+                                    lineNumber: 35,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, service.id, true, {
                             fileName: "[project]/components/Services.js",
-                            lineNumber: 24,
+                            lineNumber: 23,
                             columnNumber: 15
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/components/Services.js",
-                    lineNumber: 22,
+                    lineNumber: 21,
                     columnNumber: 11
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                    className: "mt-14 text-center",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                            className: "text-law-muted text-sm font-sans mb-5",
+                            children: "¿Necesitas asesoramiento legal?"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Services.js",
+                            lineNumber: 45,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                            href: "#contacto",
+                            className: "inline-block bg-law-gold text-law-black px-8 py-3.5 text-xs font-semibold tracking-widest uppercase hover:bg-law-gold-light transition-colors rounded-sm shadow-lg shadow-black/30",
+                            children: "Consultar Ahora"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Services.js",
+                            lineNumber: 48,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/Services.js",
+                    lineNumber: 44,
+                    columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
@@ -669,27 +1059,135 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react/jsx-dev-runtime [external] (react/jsx-dev-runtime, cjs)");
 ;
+const PhoneIcon = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
+        viewBox: "0 0 24 24",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "1.4",
+        className: "w-5 h-5",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
+            d: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6.06 6.06l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+        }, void 0, false, {
+            fileName: "[project]/components/Contact.js",
+            lineNumber: 3,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    }, void 0, false, {
+        fileName: "[project]/components/Contact.js",
+        lineNumber: 2,
+        columnNumber: 3
+    }, ("TURBOPACK compile-time value", void 0));
+const EmailIcon = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
+        viewBox: "0 0 24 24",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "1.4",
+        className: "w-5 h-5",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
+                d: "M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+            }, void 0, false, {
+                fileName: "[project]/components/Contact.js",
+                lineNumber: 9,
+                columnNumber: 5
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("polyline", {
+                points: "22,6 12,13 2,6"
+            }, void 0, false, {
+                fileName: "[project]/components/Contact.js",
+                lineNumber: 10,
+                columnNumber: 5
+            }, ("TURBOPACK compile-time value", void 0))
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/Contact.js",
+        lineNumber: 8,
+        columnNumber: 3
+    }, ("TURBOPACK compile-time value", void 0));
+const LocationIcon = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
+        viewBox: "0 0 24 24",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "1.4",
+        className: "w-5 h-5",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
+                d: "M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+            }, void 0, false, {
+                fileName: "[project]/components/Contact.js",
+                lineNumber: 16,
+                columnNumber: 5
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("circle", {
+                cx: "12",
+                cy: "10",
+                r: "3"
+            }, void 0, false, {
+                fileName: "[project]/components/Contact.js",
+                lineNumber: 17,
+                columnNumber: 5
+            }, ("TURBOPACK compile-time value", void 0))
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/Contact.js",
+        lineNumber: 15,
+        columnNumber: 3
+    }, ("TURBOPACK compile-time value", void 0));
+const WhatsAppIcon = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
+        viewBox: "0 0 24 24",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "1.4",
+        className: "w-5 h-5",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
+            d: "M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+        }, void 0, false, {
+            fileName: "[project]/components/Contact.js",
+            lineNumber: 23,
+            columnNumber: 5
+        }, ("TURBOPACK compile-time value", void 0))
+    }, void 0, false, {
+        fileName: "[project]/components/Contact.js",
+        lineNumber: 22,
+        columnNumber: 3
+    }, ("TURBOPACK compile-time value", void 0));
 const contactItems = (profile)=>{
     const items = [];
     if (profile?.phone && profile.phone !== '...') items.push({
-        icon: '📞',
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(PhoneIcon, {}, void 0, false, {
+            fileName: "[project]/components/Contact.js",
+            lineNumber: 30,
+            columnNumber: 24
+        }, ("TURBOPACK compile-time value", void 0)),
         label: 'Telefono',
         value: profile.phone,
         href: `tel:${profile.phone}`
     });
     if (profile?.email && profile.email !== '...') items.push({
-        icon: '✉️',
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(EmailIcon, {}, void 0, false, {
+            fileName: "[project]/components/Contact.js",
+            lineNumber: 32,
+            columnNumber: 24
+        }, ("TURBOPACK compile-time value", void 0)),
         label: 'Email',
         value: profile.email,
         href: `mailto:${profile.email}`
     });
     if (profile?.address && profile.address !== '...') items.push({
-        icon: '📍',
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(LocationIcon, {}, void 0, false, {
+            fileName: "[project]/components/Contact.js",
+            lineNumber: 34,
+            columnNumber: 24
+        }, ("TURBOPACK compile-time value", void 0)),
         label: 'Direccion',
         value: profile.address
     });
     if (profile?.whatsapp) items.push({
-        icon: '💬',
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(WhatsAppIcon, {}, void 0, false, {
+            fileName: "[project]/components/Contact.js",
+            lineNumber: 37,
+            columnNumber: 13
+        }, ("TURBOPACK compile-time value", void 0)),
         label: 'WhatsApp',
         value: 'Escribir por WhatsApp',
         href: `https://wa.me/${profile.whatsapp.replace(/\D/g, '')}`,
@@ -701,7 +1199,7 @@ function Contact({ profile }) {
     const items = contactItems(profile);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
         id: "contacto",
-        className: "py-24 bg-law-dark border-t border-law-border",
+        className: "py-28 bg-law-black border-t border-law-border",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
             className: "max-w-6xl mx-auto px-6",
             children: [
@@ -709,32 +1207,40 @@ function Contact({ profile }) {
                     className: "text-center mb-16",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                            className: "text-law-muted text-xs tracking-[0.4em] uppercase mb-5 font-sans",
+                            className: "text-law-gold text-xs tracking-[0.45em] uppercase mb-5 font-sans font-medium",
                             children: "Ponete en Contacto"
                         }, void 0, false, {
                             fileName: "[project]/components/Contact.js",
-                            lineNumber: 27,
+                            lineNumber: 53,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
-                            className: "font-serif text-4xl md:text-5xl text-law-white",
+                            className: "font-serif text-4xl md:text-5xl text-law-white mb-4",
                             children: "Contacto"
                         }, void 0, false, {
                             fileName: "[project]/components/Contact.js",
-                            lineNumber: 30,
+                            lineNumber: 56,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                            className: "text-law-muted text-sm font-sans max-w-md mx-auto",
+                            children: "Consulta confidencial. Respondemos a la brevedad."
+                        }, void 0, false, {
+                            fileName: "[project]/components/Contact.js",
+                            lineNumber: 57,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: "w-16 h-px bg-law-border mx-auto mt-6"
+                            className: "w-16 h-0.5 bg-law-gold mx-auto mt-6"
                         }, void 0, false, {
                             fileName: "[project]/components/Contact.js",
-                            lineNumber: 31,
+                            lineNumber: 60,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Contact.js",
-                    lineNumber: 26,
+                    lineNumber: 52,
                     columnNumber: 9
                 }, this),
                 items.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -742,42 +1248,62 @@ function Contact({ profile }) {
                     children: "Los datos de contacto se mostraran aqui."
                 }, void 0, false, {
                     fileName: "[project]/components/Contact.js",
-                    lineNumber: 35,
+                    lineNumber: 64,
                     columnNumber: 11
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                     className: `grid gap-5 ${items.length <= 2 ? 'grid-cols-1 md:grid-cols-2 max-w-2xl mx-auto' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'}`,
                     children: items.map(({ icon, label, value, href, external })=>{
                         const card = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                            className: "bg-law-surface border border-law-border p-6 group hover:border-law-white/25 transition-all duration-300 h-full",
+                            className: "bg-law-surface border border-law-border p-6 group hover:border-law-gold/30 hover:bg-law-card transition-all duration-300 rounded-sm h-full flex flex-col gap-4",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                    className: "text-3xl mb-4",
+                                    className: "w-10 h-10 rounded-full bg-law-card border border-law-border flex items-center justify-center text-law-gold group-hover:bg-law-gold/10 group-hover:border-law-gold/30 transition-all duration-300",
                                     children: icon
                                 }, void 0, false, {
                                     fileName: "[project]/components/Contact.js",
-                                    lineNumber: 49,
+                                    lineNumber: 78,
                                     columnNumber: 19
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                    className: "text-law-muted text-xs tracking-widest uppercase mb-2 font-sans",
-                                    children: label
-                                }, void 0, false, {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                            className: "text-law-muted text-xs tracking-widest uppercase mb-1.5 font-sans",
+                                            children: label
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Contact.js",
+                                            lineNumber: 82,
+                                            columnNumber: 21
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                            className: "text-law-text text-sm font-sans group-hover:text-law-white transition-colors leading-relaxed",
+                                            children: value
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Contact.js",
+                                            lineNumber: 85,
+                                            columnNumber: 21
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/components/Contact.js",
-                                    lineNumber: 50,
+                                    lineNumber: 81,
                                     columnNumber: 19
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                    className: "text-law-text text-sm font-sans group-hover:text-law-white transition-colors",
-                                    children: value
-                                }, void 0, false, {
+                                href && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                    className: "text-law-gold text-xs font-sans font-medium tracking-wide mt-auto opacity-0 group-hover:opacity-100 transition-opacity",
+                                    children: [
+                                        external ? 'Abrir WhatsApp' : label === 'Email' ? 'Enviar Email' : 'Llamar',
+                                        ' ',
+                                        "→"
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/components/Contact.js",
-                                    lineNumber: 53,
-                                    columnNumber: 19
+                                    lineNumber: 90,
+                                    columnNumber: 21
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Contact.js",
-                            lineNumber: 48,
+                            lineNumber: 77,
                             columnNumber: 17
                         }, this);
                         if (href) {
@@ -788,7 +1314,7 @@ function Contact({ profile }) {
                                 children: card
                             }, label, false, {
                                 fileName: "[project]/components/Contact.js",
-                                lineNumber: 61,
+                                lineNumber: 100,
                                 columnNumber: 19
                             }, this);
                         }
@@ -796,24 +1322,24 @@ function Contact({ profile }) {
                             children: card
                         }, label, false, {
                             fileName: "[project]/components/Contact.js",
-                            lineNumber: 71,
+                            lineNumber: 110,
                             columnNumber: 22
                         }, this);
                     })
                 }, void 0, false, {
                     fileName: "[project]/components/Contact.js",
-                    lineNumber: 39,
+                    lineNumber: 68,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/Contact.js",
-            lineNumber: 25,
+            lineNumber: 51,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/Contact.js",
-        lineNumber: 24,
+        lineNumber: 50,
         columnNumber: 5
     }, this);
 }
@@ -831,41 +1357,64 @@ function Footer({ profile }) {
     const year = new Date().getFullYear();
     const name = profile?.name && profile.name !== '...' ? profile.name : 'Estudio Juridico';
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("footer", {
-        className: "bg-black border-t border-law-border py-8",
+        className: "bg-law-dark border-t border-law-border py-10",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-            className: "max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                    className: "font-serif text-law-white text-sm",
-                    children: name
-                }, void 0, false, {
-                    fileName: "[project]/components/Footer.js",
-                    lineNumber: 9,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                    className: "text-law-muted text-xs font-sans",
-                    children: [
-                        "© ",
-                        year,
-                        " · Todos los derechos reservados"
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/components/Footer.js",
-                    lineNumber: 11,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                    href: "/admin/login",
-                    className: "text-law-muted text-xs font-sans hover:text-law-secondary transition-colors",
-                    children: "Acceso Administracion"
-                }, void 0, false, {
-                    fileName: "[project]/components/Footer.js",
-                    lineNumber: 15,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
+            className: "max-w-6xl mx-auto px-6",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                className: "flex flex-col md:flex-row items-center justify-between gap-5",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                        className: "flex items-center gap-3",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                className: "w-1.5 h-1.5 rounded-full bg-law-gold"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Footer.js",
+                                lineNumber: 11,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                className: "font-serif text-law-white text-sm",
+                                children: name
+                            }, void 0, false, {
+                                fileName: "[project]/components/Footer.js",
+                                lineNumber: 12,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/Footer.js",
+                        lineNumber: 10,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                        className: "text-law-muted text-xs font-sans",
+                        children: [
+                            "© ",
+                            year,
+                            " · Todos los derechos reservados"
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/Footer.js",
+                        lineNumber: 15,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                        href: "/admin/login",
+                        className: "text-law-muted text-xs font-sans hover:text-law-gold transition-colors",
+                        children: "Acceso Administracion"
+                    }, void 0, false, {
+                        fileName: "[project]/components/Footer.js",
+                        lineNumber: 19,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/Footer.js",
+                lineNumber: 9,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
             fileName: "[project]/components/Footer.js",
             lineNumber: 8,
             columnNumber: 7

@@ -12,11 +12,17 @@ export default function Navbar({ name }) {
 
   const displayName = name && name !== '...' ? name : 'Estudio Juridico'
 
+  const links = [
+    ['#inicio', 'Inicio'],
+    ['#servicios', 'Servicios'],
+    ['#contacto', 'Contacto'],
+  ]
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-black/95 backdrop-blur-sm border-b border-law-border'
+          ? 'bg-law-dark/95 backdrop-blur-md border-b border-law-border shadow-lg shadow-black/30'
           : 'bg-transparent'
       }`}
     >
@@ -27,20 +33,19 @@ export default function Navbar({ name }) {
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
-          {[['#inicio', 'Inicio'], ['#servicios', 'Servicios'], ['#contacto', 'Contacto']].map(
-            ([href, label]) => (
-              <a
-                key={href}
-                href={href}
-                className="text-law-secondary hover:text-law-white transition-colors text-xs tracking-widest uppercase"
-              >
-                {label}
-              </a>
-            )
-          )}
+          {links.map(([href, label]) => (
+            <a
+              key={href}
+              href={href}
+              className="text-law-secondary hover:text-law-white transition-colors text-xs tracking-widest uppercase relative group"
+            >
+              {label}
+              <span className="absolute -bottom-1 left-0 w-0 h-px bg-law-gold transition-all duration-300 group-hover:w-full" />
+            </a>
+          ))}
           <a
             href="#contacto"
-            className="border border-law-white/60 text-law-white px-5 py-2 text-xs tracking-widest uppercase hover:bg-law-white hover:text-black transition-all"
+            className="bg-law-gold text-law-black px-5 py-2 text-xs tracking-widest uppercase font-semibold hover:bg-law-gold-light transition-colors rounded-sm"
           >
             Consultar
           </a>
@@ -64,19 +69,24 @@ export default function Navbar({ name }) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-black border-t border-law-border px-6 py-5 flex flex-col gap-5">
-          {[['#inicio', 'Inicio'], ['#servicios', 'Servicios'], ['#contacto', 'Contacto']].map(
-            ([href, label]) => (
-              <a
-                key={href}
-                href={href}
-                onClick={() => setMenuOpen(false)}
-                className="text-law-secondary hover:text-law-white text-xs tracking-widest uppercase transition-colors"
-              >
-                {label}
-              </a>
-            )
-          )}
+        <div className="md:hidden bg-law-dark border-t border-law-border px-6 py-5 flex flex-col gap-5">
+          {links.map(([href, label]) => (
+            <a
+              key={href}
+              href={href}
+              onClick={() => setMenuOpen(false)}
+              className="text-law-secondary hover:text-law-white text-xs tracking-widest uppercase transition-colors"
+            >
+              {label}
+            </a>
+          ))}
+          <a
+            href="#contacto"
+            onClick={() => setMenuOpen(false)}
+            className="bg-law-gold text-law-black px-5 py-3 text-xs tracking-widest uppercase font-semibold hover:bg-law-gold-light transition-colors text-center rounded-sm mt-1"
+          >
+            Consultar
+          </a>
         </div>
       )}
     </nav>

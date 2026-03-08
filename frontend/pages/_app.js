@@ -1,4 +1,4 @@
-import { Playfair_Display, Inter } from 'next/font/google'
+import { Playfair_Display, DM_Sans } from 'next/font/google'
 import '../styles/globals.css'
 
 const playfair = Playfair_Display({
@@ -7,15 +7,15 @@ const playfair = Playfair_Display({
   weight: ['400', '500', '600', '700'],
 })
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-dm',
   weight: ['300', '400', '500', '600'],
 })
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className={`${playfair.variable} ${inter.variable}`}>
+    <div className={`${playfair.variable} ${dmSans.variable}`}>
       <Component {...pageProps} />
     </div>
   )

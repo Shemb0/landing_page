@@ -29,7 +29,7 @@ export default function Home({ profile, services }) {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const [profile, services] = await Promise.all([
     getProfile(),
     getServices(),

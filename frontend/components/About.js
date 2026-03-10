@@ -29,7 +29,6 @@ const values = [
         <polyline points="14,2 14,8 20,8" />
         <line x1="16" y1="13" x2="8" y2="13" />
         <line x1="16" y1="17" x2="8" y2="17" />
-        <polyline points="10,9 9,9 8,9" />
       </svg>
     ),
   },
@@ -49,10 +48,59 @@ export default function About({ profile }) {
   if (!profile?.bio || profile.bio === '...') return null
 
   return (
-    <section id="sobre-mi" className="py-28 bg-law-black border-t border-law-border">
+    <section id="sobre-mi" className="py-28 bg-law-black border-t border-law-border overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Text */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+
+          {/* Left — photo placeholder */}
+          <div className="relative flex justify-center lg:justify-start">
+            <div className="relative w-full max-w-sm lg:max-w-full">
+              {/* Main photo frame */}
+              <div
+                className="relative aspect-[4/5] overflow-hidden"
+                style={{
+                  backgroundImage: `url('/about-photo.jpg')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center top',
+                  backgroundColor: '#1A1917',
+                }}
+              >
+                {/* Placeholder (visible when no image) */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 bg-gradient-to-br from-law-surface via-law-card to-law-surface">
+                  <svg viewBox="0 0 80 80" fill="none" className="w-16 h-16 text-law-gold/20">
+                    <circle cx="40" cy="28" r="16" stroke="currentColor" strokeWidth="1.5"/>
+                    <path d="M10 72 C10 55 20 48 40 48 C60 48 70 55 70 72" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                  </svg>
+                  <div className="text-center px-8">
+                    <p className="text-law-border text-xs font-sans tracking-[0.3em] uppercase">Foto del Abogado</p>
+                    <p className="text-law-muted/40 text-[10px] font-sans mt-1">about-photo.jpg</p>
+                  </div>
+                </div>
+
+                {/* Gradient overlay bottom */}
+                <div className="absolute inset-0 bg-gradient-to-t from-law-black/50 via-transparent to-transparent" />
+
+                {/* Corner accents */}
+                <div className="absolute top-4 left-4 w-8 h-8 border-t border-l border-law-gold/50" />
+                <div className="absolute top-4 right-4 w-8 h-8 border-t border-r border-law-gold/50" />
+                <div className="absolute bottom-4 left-4 w-8 h-8 border-b border-l border-law-gold/50" />
+                <div className="absolute bottom-4 right-4 w-8 h-8 border-b border-r border-law-gold/50" />
+
+                {/* Name badge at bottom */}
+                <div className="absolute bottom-0 left-0 right-0 px-6 py-5">
+                  {profile.name && profile.name !== '...' && (
+                    <p className="font-serif text-law-white text-lg font-semibold">{profile.name}</p>
+                  )}
+                  <p className="text-law-gold text-xs font-sans tracking-widest uppercase mt-1">Abogado</p>
+                </div>
+              </div>
+
+              {/* Offset decorative border */}
+              <div className="absolute -bottom-4 -right-4 w-full h-full border border-law-border/25 -z-10" />
+            </div>
+          </div>
+
+          {/* Right — text + values */}
           <div>
             <p className="text-law-gold text-xs tracking-[0.45em] uppercase mb-5 font-sans font-medium">
               Sobre mi
@@ -66,30 +114,31 @@ export default function About({ profile }) {
             </p>
             <a
               href="#contacto"
-              className="inline-flex items-center gap-2 text-law-gold text-xs font-semibold tracking-widest uppercase hover:gap-3 transition-all duration-200"
+              className="inline-flex items-center gap-2 text-law-gold text-xs font-semibold tracking-widest uppercase hover:gap-3 transition-all duration-200 mb-12"
             >
               Solicitar Consulta
               <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-3.5 h-3.5">
                 <path d="M3 8h10M9 4l4 4-4 4" />
               </svg>
             </a>
+
+            {/* Values grid */}
+            <div className="grid grid-cols-2 gap-3">
+              {values.map(({ icon, label, desc }) => (
+                <div
+                  key={label}
+                  className="bg-law-surface border border-law-border p-5 group hover:border-law-gold/30 hover:bg-law-card transition-all duration-300 rounded-sm"
+                >
+                  <div className="text-law-gold mb-3 opacity-70 group-hover:opacity-100 transition-opacity">
+                    {icon}
+                  </div>
+                  <p className="text-law-white text-sm font-sans font-medium mb-1">{label}</p>
+                  <p className="text-law-muted text-xs font-sans leading-relaxed">{desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Values grid */}
-          <div className="grid grid-cols-2 gap-4">
-            {values.map(({ icon, label, desc }) => (
-              <div
-                key={label}
-                className="bg-law-surface border border-law-border p-6 group hover:border-law-gold/30 hover:bg-law-card transition-all duration-300 rounded-sm"
-              >
-                <div className="text-law-gold mb-4 opacity-80 group-hover:opacity-100 transition-opacity">
-                  {icon}
-                </div>
-                <p className="text-law-white text-sm font-sans font-medium mb-1">{label}</p>
-                <p className="text-law-muted text-xs font-sans leading-relaxed">{desc}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

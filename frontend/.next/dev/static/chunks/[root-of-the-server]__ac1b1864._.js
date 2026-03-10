@@ -496,6 +496,10 @@ function Navbar({ name }) {
             'Inicio'
         ],
         [
+            '#sobre-mi',
+            'Sobre Mi'
+        ],
+        [
             '#servicios',
             'Servicios'
         ],
@@ -515,7 +519,7 @@ function Navbar({ name }) {
                         children: displayName
                     }, void 0, false, {
                         fileName: "[project]/components/Navbar.js",
-                        lineNumber: 30,
+                        lineNumber: 31,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -530,13 +534,13 @@ function Navbar({ name }) {
                                             className: "absolute -bottom-1 left-0 w-0 h-px bg-law-gold transition-all duration-300 group-hover:w-full"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Navbar.js",
-                                            lineNumber: 43,
+                                            lineNumber: 44,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, href, true, {
                                     fileName: "[project]/components/Navbar.js",
-                                    lineNumber: 37,
+                                    lineNumber: 38,
                                     columnNumber: 13
                                 }, this)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -545,13 +549,13 @@ function Navbar({ name }) {
                                 children: "Consultar"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.js",
-                                lineNumber: 46,
+                                lineNumber: 47,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Navbar.js",
-                        lineNumber: 35,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -570,7 +574,7 @@ function Navbar({ name }) {
                                 d: "M6 18L18 6M6 6l12 12"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.js",
-                                lineNumber: 62,
+                                lineNumber: 63,
                                 columnNumber: 15
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                 strokeLinecap: "round",
@@ -579,23 +583,23 @@ function Navbar({ name }) {
                                 d: "M4 6h16M4 12h16M4 18h16"
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.js",
-                                lineNumber: 64,
+                                lineNumber: 65,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Navbar.js",
-                            lineNumber: 60,
+                            lineNumber: 61,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Navbar.js",
-                        lineNumber: 55,
+                        lineNumber: 56,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Navbar.js",
-                lineNumber: 29,
+                lineNumber: 30,
                 columnNumber: 7
             }, this),
             menuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -608,7 +612,7 @@ function Navbar({ name }) {
                             children: label
                         }, href, false, {
                             fileName: "[project]/components/Navbar.js",
-                            lineNumber: 74,
+                            lineNumber: 75,
                             columnNumber: 13
                         }, this)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -618,19 +622,19 @@ function Navbar({ name }) {
                         children: "Consultar"
                     }, void 0, false, {
                         fileName: "[project]/components/Navbar.js",
-                        lineNumber: 83,
+                        lineNumber: 84,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Navbar.js",
-                lineNumber: 72,
+                lineNumber: 73,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Navbar.js",
-        lineNumber: 22,
+        lineNumber: 23,
         columnNumber: 5
     }, this);
 }
@@ -655,6 +659,11 @@ function Hero({ profile }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "inicio",
         className: "relative min-h-screen flex items-center bg-law-dark overflow-hidden",
+        style: {
+            backgroundImage: `linear-gradient(rgba(10,9,8,0.55), rgba(10,9,8,0.88)), url('/hero-bg.jpg')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center top'
+        },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute inset-0 pointer-events-none",
@@ -663,32 +672,32 @@ function Hero({ profile }) {
                 }
             }, void 0, false, {
                 fileName: "[project]/components/Hero.js",
-                lineNumber: 8,
+                lineNumber: 13,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 opacity-[0.035]",
+                className: "absolute inset-0 opacity-[0.03]",
                 style: {
                     backgroundImage: 'radial-gradient(circle, #C8C0B4 1px, transparent 1px)',
                     backgroundSize: '36px 36px'
                 }
             }, void 0, false, {
                 fileName: "[project]/components/Hero.js",
-                lineNumber: 17,
+                lineNumber: 22,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-t from-law-black to-transparent"
             }, void 0, false, {
                 fileName: "[project]/components/Hero.js",
-                lineNumber: 26,
+                lineNumber: 31,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-law-gold/20 to-transparent"
             }, void 0, false, {
                 fileName: "[project]/components/Hero.js",
-                lineNumber: 29,
+                lineNumber: 34,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -707,7 +716,7 @@ function Hero({ profile }) {
                             strokeWidth: "1"
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 39,
+                            lineNumber: 44,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -718,7 +727,7 @@ function Hero({ profile }) {
                             strokeWidth: "0.5"
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 40,
+                            lineNumber: 45,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -730,7 +739,7 @@ function Hero({ profile }) {
                             strokeWidth: "0.8"
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 41,
+                            lineNumber: 46,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -742,7 +751,7 @@ function Hero({ profile }) {
                             strokeWidth: "0.8"
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 42,
+                            lineNumber: 47,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -754,7 +763,7 @@ function Hero({ profile }) {
                             strokeWidth: "0.6"
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 43,
+                            lineNumber: 48,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -766,7 +775,7 @@ function Hero({ profile }) {
                             strokeWidth: "0.6"
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 44,
+                            lineNumber: 49,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -777,7 +786,7 @@ function Hero({ profile }) {
                             strokeWidth: "0.6"
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 45,
+                            lineNumber: 50,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -788,7 +797,7 @@ function Hero({ profile }) {
                             strokeWidth: "0.6"
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 46,
+                            lineNumber: 51,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -799,18 +808,18 @@ function Hero({ profile }) {
                             strokeWidth: "0.6"
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 47,
+                            lineNumber: 52,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Hero.js",
-                    lineNumber: 33,
+                    lineNumber: 38,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Hero.js",
-                lineNumber: 32,
+                lineNumber: 37,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -823,7 +832,7 @@ function Hero({ profile }) {
                             children: "Estudio Juridico — Representacion Legal"
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 53,
+                            lineNumber: 58,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -831,7 +840,7 @@ function Hero({ profile }) {
                             children: profile?.name || '...'
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 57,
+                            lineNumber: 62,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -841,7 +850,7 @@ function Hero({ profile }) {
                                     className: "w-20 h-px bg-law-gold animate-expand delay-300"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.js",
-                                    lineNumber: 62,
+                                    lineNumber: 67,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -849,13 +858,13 @@ function Hero({ profile }) {
                                     children: "Abogado"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.js",
-                                    lineNumber: 63,
+                                    lineNumber: 68,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 61,
+                            lineNumber: 66,
                             columnNumber: 11
                         }, this),
                         profile?.tagline && profile.tagline !== '...' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -863,7 +872,7 @@ function Hero({ profile }) {
                             children: profile.tagline
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 67,
+                            lineNumber: 72,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -875,7 +884,7 @@ function Hero({ profile }) {
                                     children: "Contactar Ahora"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.js",
-                                    lineNumber: 73,
+                                    lineNumber: 78,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -884,13 +893,13 @@ function Hero({ profile }) {
                                     children: "Ver Servicios"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.js",
-                                    lineNumber: 79,
+                                    lineNumber: 84,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 72,
+                            lineNumber: 77,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -906,7 +915,7 @@ function Hero({ profile }) {
                                             className: "w-1 h-1 rounded-full bg-law-gold"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Hero.js",
-                                            lineNumber: 95,
+                                            lineNumber: 100,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -914,29 +923,29 @@ function Hero({ profile }) {
                                             children: badge
                                         }, void 0, false, {
                                             fileName: "[project]/components/Hero.js",
-                                            lineNumber: 96,
+                                            lineNumber: 101,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, badge, true, {
                                     fileName: "[project]/components/Hero.js",
-                                    lineNumber: 94,
+                                    lineNumber: 99,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.js",
-                            lineNumber: 88,
+                            lineNumber: 93,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Hero.js",
-                    lineNumber: 52,
+                    lineNumber: 57,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Hero.js",
-                lineNumber: 51,
+                lineNumber: 56,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -947,20 +956,20 @@ function Hero({ profile }) {
                         children: "Scroll"
                     }, void 0, false, {
                         fileName: "[project]/components/Hero.js",
-                        lineNumber: 105,
+                        lineNumber: 110,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "w-px h-10 bg-gradient-to-b from-law-gold/60 to-transparent"
                     }, void 0, false, {
                         fileName: "[project]/components/Hero.js",
-                        lineNumber: 106,
+                        lineNumber: 111,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Hero.js",
-                lineNumber: 104,
+                lineNumber: 109,
                 columnNumber: 7
             }, this)
         ]
@@ -1152,7 +1161,10 @@ function About({ profile }) {
     if (!profile?.bio || profile.bio === '...') return null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "sobre-mi",
-        className: "py-28 bg-law-black border-t border-law-border",
+        className: "py-28 bg-law-black border-t border-law-border relative overflow-hidden",
+        style: {
+            background: 'linear-gradient(135deg, #0A0908 50%, rgba(197,163,90,0.05) 50%), #0A0908'
+        },
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "max-w-6xl mx-auto px-6",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1165,7 +1177,7 @@ function About({ profile }) {
                                 children: "Sobre mi"
                             }, void 0, false, {
                                 fileName: "[project]/components/About.js",
-                                lineNumber: 57,
+                                lineNumber: 63,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1173,14 +1185,14 @@ function About({ profile }) {
                                 children: profile.name && profile.name !== '...' ? profile.name : '...'
                             }, void 0, false, {
                                 fileName: "[project]/components/About.js",
-                                lineNumber: 60,
+                                lineNumber: 66,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "w-16 h-0.5 bg-law-gold mb-8"
                             }, void 0, false, {
                                 fileName: "[project]/components/About.js",
-                                lineNumber: 63,
+                                lineNumber: 69,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1188,7 +1200,7 @@ function About({ profile }) {
                                 children: profile.bio
                             }, void 0, false, {
                                 fileName: "[project]/components/About.js",
-                                lineNumber: 64,
+                                lineNumber: 70,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1206,24 +1218,24 @@ function About({ profile }) {
                                             d: "M3 8h10M9 4l4 4-4 4"
                                         }, void 0, false, {
                                             fileName: "[project]/components/About.js",
-                                            lineNumber: 73,
+                                            lineNumber: 79,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/About.js",
-                                        lineNumber: 72,
+                                        lineNumber: 78,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/About.js",
-                                lineNumber: 67,
+                                lineNumber: 73,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/About.js",
-                        lineNumber: 56,
+                        lineNumber: 62,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1236,7 +1248,7 @@ function About({ profile }) {
                                         children: icon
                                     }, void 0, false, {
                                         fileName: "[project]/components/About.js",
-                                        lineNumber: 85,
+                                        lineNumber: 91,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1244,7 +1256,7 @@ function About({ profile }) {
                                         children: label
                                     }, void 0, false, {
                                         fileName: "[project]/components/About.js",
-                                        lineNumber: 88,
+                                        lineNumber: 94,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1252,29 +1264,29 @@ function About({ profile }) {
                                         children: desc
                                     }, void 0, false, {
                                         fileName: "[project]/components/About.js",
-                                        lineNumber: 89,
+                                        lineNumber: 95,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, label, true, {
                                 fileName: "[project]/components/About.js",
-                                lineNumber: 81,
+                                lineNumber: 87,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/components/About.js",
-                        lineNumber: 79,
+                        lineNumber: 85,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/About.js",
-                lineNumber: 54,
+                lineNumber: 60,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/About.js",
-            lineNumber: 53,
+            lineNumber: 59,
             columnNumber: 7
         }, this)
     }, void 0, false, {
@@ -1764,72 +1776,255 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx
 function Footer({ profile }) {
     const year = new Date().getFullYear();
     const name = profile?.name && profile.name !== '...' ? profile.name : 'Estudio Juridico';
+    const navLinks = [
+        [
+            '#inicio',
+            'Inicio'
+        ],
+        [
+            '#sobre-mi',
+            'Sobre Mi'
+        ],
+        [
+            '#servicios',
+            'Servicios'
+        ],
+        [
+            '#contacto',
+            'Contacto'
+        ]
+    ];
+    const hasContact = profile?.phone && profile.phone !== '...' || profile?.email && profile.email !== '...' || profile?.address && profile.address !== '...';
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
-        className: "bg-law-dark border-t border-law-border py-10",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "max-w-6xl mx-auto px-6",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex flex-col md:flex-row items-center justify-between gap-5",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center gap-3",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "w-1.5 h-1.5 rounded-full bg-law-gold"
-                            }, void 0, false, {
-                                fileName: "[project]/components/Footer.js",
-                                lineNumber: 11,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "font-serif text-law-white text-sm",
-                                children: name
-                            }, void 0, false, {
-                                fileName: "[project]/components/Footer.js",
-                                lineNumber: 12,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/Footer.js",
-                        lineNumber: 10,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-law-muted text-xs font-sans",
-                        children: [
-                            "© ",
-                            year,
-                            " · Todos los derechos reservados"
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/Footer.js",
-                        lineNumber: 15,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                        href: "/admin/login",
-                        className: "text-law-muted text-xs font-sans hover:text-law-gold transition-colors",
-                        children: "Acceso Administracion"
-                    }, void 0, false, {
-                        fileName: "[project]/components/Footer.js",
-                        lineNumber: 19,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
+        className: "bg-law-dark border-t border-law-border",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "max-w-6xl mx-auto px-6 py-16",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "grid grid-cols-1 md:grid-cols-3 gap-12",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex items-center gap-3 mb-5",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "w-1.5 h-1.5 rounded-full bg-law-gold"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Footer.js",
+                                            lineNumber: 26,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "font-serif text-law-white text-base",
+                                            children: name
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Footer.js",
+                                            lineNumber: 27,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/Footer.js",
+                                    lineNumber: 25,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "w-10 h-px bg-law-gold mb-5"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Footer.js",
+                                    lineNumber: 29,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-law-muted text-xs font-sans leading-relaxed max-w-xs",
+                                    children: "Representacion legal con compromiso y profesionalismo. Cada caso recibe la atencion que merece."
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Footer.js",
+                                    lineNumber: 30,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/Footer.js",
+                            lineNumber: 24,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-law-white text-xs font-sans tracking-widest uppercase mb-5 font-medium",
+                                    children: "Navegacion"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Footer.js",
+                                    lineNumber: 37,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "w-8 h-px bg-law-gold mb-6"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Footer.js",
+                                    lineNumber: 40,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                    className: "flex flex-col gap-3",
+                                    children: navLinks.map(([href, label])=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                href: href,
+                                                className: "text-law-muted text-xs font-sans hover:text-law-gold transition-colors tracking-wide",
+                                                children: label
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/Footer.js",
+                                                lineNumber: 44,
+                                                columnNumber: 19
+                                            }, this)
+                                        }, href, false, {
+                                            fileName: "[project]/components/Footer.js",
+                                            lineNumber: 43,
+                                            columnNumber: 17
+                                        }, this))
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Footer.js",
+                                    lineNumber: 41,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/Footer.js",
+                            lineNumber: 36,
+                            columnNumber: 11
+                        }, this),
+                        hasContact && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-law-white text-xs font-sans tracking-widest uppercase mb-5 font-medium",
+                                    children: "Contacto"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Footer.js",
+                                    lineNumber: 58,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "w-8 h-px bg-law-gold mb-6"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Footer.js",
+                                    lineNumber: 61,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                    className: "flex flex-col gap-3",
+                                    children: [
+                                        profile?.phone && profile.phone !== '...' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                href: `tel:${profile.phone}`,
+                                                className: "text-law-muted text-xs font-sans hover:text-law-gold transition-colors",
+                                                children: profile.phone
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/Footer.js",
+                                                lineNumber: 65,
+                                                columnNumber: 21
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Footer.js",
+                                            lineNumber: 64,
+                                            columnNumber: 19
+                                        }, this),
+                                        profile?.email && profile.email !== '...' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                href: `mailto:${profile.email}`,
+                                                className: "text-law-muted text-xs font-sans hover:text-law-gold transition-colors",
+                                                children: profile.email
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/Footer.js",
+                                                lineNumber: 75,
+                                                columnNumber: 21
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Footer.js",
+                                            lineNumber: 74,
+                                            columnNumber: 19
+                                        }, this),
+                                        profile?.address && profile.address !== '...' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-law-muted text-xs font-sans leading-relaxed",
+                                                children: profile.address
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/Footer.js",
+                                                lineNumber: 85,
+                                                columnNumber: 21
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Footer.js",
+                                            lineNumber: 84,
+                                            columnNumber: 19
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/Footer.js",
+                                    lineNumber: 62,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/Footer.js",
+                            lineNumber: 57,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/Footer.js",
+                    lineNumber: 22,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/components/Footer.js",
-                lineNumber: 9,
-                columnNumber: 9
+                lineNumber: 21,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "border-t border-law-border",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "max-w-6xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-3",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-law-muted text-xs font-sans",
+                            children: [
+                                "© ",
+                                year,
+                                " ",
+                                name,
+                                " · Todos los derechos reservados"
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/Footer.js",
+                            lineNumber: 99,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: "/admin/login",
+                            className: "text-law-muted text-xs font-sans hover:text-law-gold transition-colors",
+                            children: "Acceso Administracion"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Footer.js",
+                            lineNumber: 102,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/Footer.js",
+                    lineNumber: 98,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/components/Footer.js",
+                lineNumber: 97,
+                columnNumber: 7
             }, this)
-        }, void 0, false, {
-            fileName: "[project]/components/Footer.js",
-            lineNumber: 8,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
+        ]
+    }, void 0, true, {
         fileName: "[project]/components/Footer.js",
-        lineNumber: 7,
+        lineNumber: 19,
         columnNumber: 5
     }, this);
 }

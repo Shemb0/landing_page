@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { getProfile, getServices } from '../lib/api'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
+import Stats from '../components/Stats'
 import About from '../components/About'
 import Services from '../components/Services'
 import Contact from '../components/Contact'
@@ -21,6 +22,7 @@ export default function Home({ profile, services }) {
 
       <Navbar name={profile?.name} />
       <Hero profile={profile} />
+      <Stats />
       <About profile={profile} />
       <Services services={services} />
       <Contact profile={profile} />
